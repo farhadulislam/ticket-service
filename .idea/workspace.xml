@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="54ebf0b4-6535-4e63-8184-65029387780c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../Program Files/apache-maven-3.8.7-bin/apache-maven-3.8.7" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NLGl0LkhaTEt8ewJNXlrI0bC8l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Farhad/Nemo/LEARNING/LAB/DEMO/ticket-service/src",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ThirdPartyService" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Farhad\Nemo\LEARNING\LAB\DEMO\ticket-service\src" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Model" />
+      <recent name="Utility" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TicketRequestValidationsTest.validateTicketRequestContainsAdult">
+    <configuration name="TicketRequestValidationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticket-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Utility" />
+      <option name="MAIN_CLASS_NAME" value="Utility.TicketRequestValidationsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketRequestValidationsTest.validateTicketRequestContainsAdult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticket-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Utility" />
+      <option name="MAIN_CLASS_NAME" value="Utility.TicketRequestValidationsTest" />
+      <option name="METHOD_NAME" value="validateTicketRequestContainsAdult" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketRequestValidationsTest.validateTicketRequestIsNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticket-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Utility" />
+      <option name="MAIN_CLASS_NAME" value="Utility.TicketRequestValidationsTest" />
+      <option name="METHOD_NAME" value="validateTicketRequestIsNotEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketRequestValidationsTest.validateTicketRequestIsNotNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticket-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Utility" />
+      <option name="MAIN_CLASS_NAME" value="Utility.TicketRequestValidationsTest" />
+      <option name="METHOD_NAME" value="validateTicketRequestIsNotNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketRequestValidationsTest.validateTotalNumOfTicketsNotMoreThanTwenty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticket-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Utility" />
+      <option name="MAIN_CLASS_NAME" value="Utility.TicketRequestValidationsTest" />
+      <option name="METHOD_NAME" value="validateTotalNumOfTicketsNotMoreThanTwenty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TicketRequestValidationsTest.validateTicketRequestContainsAdult" />
+        <item itemvalue="JUnit.TicketRequestValidationsTest.validateTicketRequestIsNotNull" />
+        <item itemvalue="JUnit.TicketRequestValidationsTest.validateTicketRequestIsNotEmpty" />
+        <item itemvalue="JUnit.TicketRequestValidationsTest.validateTotalNumOfTicketsNotMoreThanTwenty" />
+        <item itemvalue="JUnit.TicketRequestValidationsTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54ebf0b4-6535-4e63-8184-65029387780c" name="Changes" comment="" />
+      <created>1679436102574</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679436102574</updated>
+    </task>
+    <servers />
+  </component>
+</project>
