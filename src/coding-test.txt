@@ -1,8 +1,4 @@
-	Dear Farhad,
 
-Software Engineer
-Service.TicketServiceImpl.Application ID number: 8135155
-Thank you for your application for the role of Software Engineer. We have looked at your application and would like to progress your application to the next stage of the recruitment process, which is a coding exercise. A template project can be found here https://github.com/dwp/cinema-tickets
 Below you will find instructions with constraints for Java and JavaScript. These will give you details of the exercise and all the acceptance criteria needed to build your solution. You have 5 days to complete the task.
 1.	When returning the completed test, could you please complete it in Java 17 or JavaScript
 2.	Publish your submission to GitHub and make sure it is public.

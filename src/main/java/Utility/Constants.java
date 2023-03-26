@@ -31,6 +31,7 @@ public class Constants {
 
     public static final class Info{
         public static final String TOTAL_COST = "TOTAL COST: %s ";
+        public static final String TOTAL_SEATS_TO_RESERVE = "TOTAL SEATS TO RESERVE: %d ";
 
     }
 

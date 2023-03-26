@@ -1,23 +1,27 @@
 package Service;
 
 import Model.TicketTypeRequest;
+import ThirdPartyService.SeatReservationServiceImpl;
 import ThirdPartyService.TicketPaymentService;
 import ThirdPartyService.SeatReservationService;
+import ThirdPartyService.TicketPaymentServiceImpl;
 import Utility.Constants;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static Utility.Constants.Info.TOTAL_COST;
+import static Utility.Constants.Info.TOTAL_SEATS_TO_RESERVE;
 import static Utility.TicketRequestValidations.*;
 
 
 public final class TicketServiceImpl implements TicketService {
-    private TicketPaymentService ticketPaymentService;
-    private SeatReservationService seatReservationService;
+    private final TicketPaymentService ticketPaymentService = new TicketPaymentServiceImpl();
+    private final SeatReservationService seatReservationService = new SeatReservationServiceImpl();
+
     @Override
     public void purchaseTickets(Long accountId, Map<TicketTypeRequest, Integer> ticketRequests) {
         Boolean isValidRequest = Boolean.TRUE;
-
         try {
             isValidRequest = validateTicketRequestIsNotEmpty(ticketRequests) &&
                             validateTicketRequestContainsAdult(ticketRequests) &&
@@ -27,9 +31,10 @@ public final class TicketServiceImpl implements TicketService {
             System.out.println(Constants.ErrorMessages.ERROR_GENERIC_ERROR);
         }
 
+        // Call the third-party or external services
         if (isValidRequest){
-             makePayment(accountId, getTotalCost(ticketRequests));
-             reserveSeat(accountId, getTotalNumberOfSeatsRequired(ticketRequests));
+            ticketPaymentService.makePayment(accountId, getTotalCost(ticketRequests));
+            seatReservationService.reserveSeat(accountId, getTotalNumberOfSeatsRequired(ticketRequests));
         }
     }
 
@@ -56,15 +61,17 @@ public final class TicketServiceImpl implements TicketService {
 
         return totalTicketCost;
     }
-    //Calculate number of seat required for adult and children since infants will be sitting on lap.
+    //Calculate number of seat required for adult and children only since infants will be sitting on lap.
     private int getTotalNumberOfSeatsRequired(Map<TicketTypeRequest, Integer> ticketRequests){
-
-        return  ticketRequests
-                .stream
-                .filter( request -> !request.equals(TicketTypeRequest.ADULT))
-                .values()
+       int totalSeatsRequired = ticketRequests
+                .entrySet()
                 .stream()
+                .filter(x -> !TicketTypeRequest.INFANT.equals(x.getKey()))
+                .map(x->x.getValue())
                 .reduce(0, Integer::sum);
+        System.out.println(String.format(TOTAL_SEATS_TO_RESERVE, totalSeatsRequired));
+
+        return  totalSeatsRequired;
     }
 
 }

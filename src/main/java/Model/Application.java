@@ -1,6 +1,5 @@
 package Model;
 
-import Model.TicketTypeRequest;
 import Service.TicketService;
 import Service.TicketServiceImpl;
 
