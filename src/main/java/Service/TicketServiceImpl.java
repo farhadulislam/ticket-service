@@ -8,10 +8,9 @@ import ThirdPartyService.TicketPaymentServiceImpl;
 import Utility.Constants;
 
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import static Utility.Constants.Info.TOTAL_COST;
-import static Utility.Constants.Info.TOTAL_SEATS_TO_RESERVE;
+import static Utility.Constants.Info.TOTAL_SEATS_TO_ALLOCATE;
 import static Utility.TicketRequestValidations.*;
 
 
@@ -63,15 +62,15 @@ public final class TicketServiceImpl implements TicketService {
     }
     //Calculate number of seat required for adult and children only since infants will be sitting on lap.
     private int getTotalNumberOfSeatsRequired(Map<TicketTypeRequest, Integer> ticketRequests){
-       int totalSeatsRequired = ticketRequests
+       int totalSeatsToAllocate = ticketRequests
                 .entrySet()
                 .stream()
                 .filter(x -> !TicketTypeRequest.INFANT.equals(x.getKey()))
                 .map(x->x.getValue())
                 .reduce(0, Integer::sum);
-        System.out.println(String.format(TOTAL_SEATS_TO_RESERVE, totalSeatsRequired));
+        System.out.println(String.format(TOTAL_SEATS_TO_ALLOCATE, totalSeatsToAllocate));
 
-        return  totalSeatsRequired;
+        return  totalSeatsToAllocate;
     }
 
 }
