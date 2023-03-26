@@ -9,6 +9,8 @@ import Utility.Constants;
 
 import java.util.Map;
 
+import static Utility.Constants.ErrorMessages.ERROR_GENERIC_ERROR;
+import static Utility.Constants.ErrorMessages.ERROR_INVALID_REQUEST;
 import static Utility.Constants.Info.TOTAL_COST;
 import static Utility.Constants.Info.TOTAL_SEATS_TO_ALLOCATE;
 import static Utility.TicketRequestValidations.*;
@@ -31,13 +33,15 @@ public final class TicketServiceImpl implements TicketService {
 
         }catch (Exception e){
             //Can be logged onto log-tracing system in lieu of sysout shown below.
-            System.out.println(Constants.ErrorMessages.ERROR_GENERIC_ERROR);
+            System.out.println(ERROR_GENERIC_ERROR);
         }
 
         // Call the third-party or external services, once ticket request is validated as per business rules.
         if (isValidRequest){
             ticketPaymentService.makePayment(accountId, getTotalCost(ticketRequests));
             seatReservationService.reserveSeat(accountId, getTotalNumberOfSeatsRequired(ticketRequests));
+        } else {
+            System.out.println(ERROR_INVALID_REQUEST);
         }
     }
 

@@ -16,7 +16,7 @@ public class Application {
         For example, it will have an entry for one adult ticket */
 
         final Map<TicketTypeRequest, Integer> ticketRequests = new HashMap<>();
-        ticketRequests.put(TicketTypeRequest.ADULT, 1);
+        ticketRequests.put(TicketTypeRequest.ADULT, 10);
         ticketRequests.put(TicketTypeRequest.CHILD, 2);
         ticketRequests.put(TicketTypeRequest.INFANT, 5);
 
