@@ -1,3 +1,4 @@
+Exception\EmptyTicketRequestException.class
 ThirdPartyService\TicketPaymentService.class
 ThirdPartyService\SeatReservationService.class
 Utility\Constants.class
@@ -6,12 +7,11 @@ Utility\Constants$Constraint.class
 Utility\TicketRequestValidations.class
 Model\Account.class
 Service\TicketServiceImpl.class
-Service\MaximumNumberOfAuthorisedTicketsCrossedException.class
+Exception\MaximumNumberOfAuthorisedTicketsCrossedException.class
 Utility\Constants$Info.class
-Service\EmptyTicketRequestException.class
+Exception\AdultTicketAbsentException.class
 Model\Application.class
 Utility\Constants$TicketCost.class
-Service\AdultTicketAbsentException.class
 ThirdPartyService\SeatReservationServiceImpl.class
 Utility\Constants$TicketType.class
 Model\TicketTypeRequest.class

@@ -20,34 +20,38 @@ public final class TicketServiceImpl implements TicketService {
 
     @Override
     public void purchaseTickets(Long accountId, Map<TicketTypeRequest, Integer> ticketRequests) {
-        Boolean isValidRequest = Boolean.TRUE;
+
+        Boolean isValidRequest = Boolean.FALSE;
+
+        //Validate request first before proceeding onto payment and reservation.
         try {
             isValidRequest = validateTicketRequestIsNotEmpty(ticketRequests) &&
                             validateTicketRequestContainsAdult(ticketRequests) &&
                             validateTotalNumOfTicketsNotMoreThanTwenty(ticketRequests);
 
         }catch (Exception e){
+            //Can be logged onto log-tracing system in lieu of sysout shown below.
             System.out.println(Constants.ErrorMessages.ERROR_GENERIC_ERROR);
         }
 
-        // Call the third-party or external services
+        // Call the third-party or external services, once ticket request is validated as per business rules.
         if (isValidRequest){
             ticketPaymentService.makePayment(accountId, getTotalCost(ticketRequests));
             seatReservationService.reserveSeat(accountId, getTotalNumberOfSeatsRequired(ticketRequests));
         }
     }
 
-
+    //Calculate cost and display ( just for clarity).
     private int getTotalCost (Map<TicketTypeRequest, Integer> ticketRequests){
 
         int totalTicketCost = 0;
 
         for (Map.Entry<TicketTypeRequest, Integer> entry : ticketRequests.entrySet()) {
             if(entry.getKey().equals(TicketTypeRequest.ADULT)){
-                int adultTicketCosts = Constants.TicketCost.TWENTY * entry.getValue();
+                int adultTicketCosts = TicketTypeRequest.ADULT.getCost() * entry.getValue();
                 totalTicketCost += adultTicketCosts;
             } else if (entry.getKey().equals(TicketTypeRequest.CHILD)) {
-                int childTicketCosts = Constants.TicketCost.TEN * entry.getValue();
+                int childTicketCosts = TicketTypeRequest.CHILD.getCost() * entry.getValue();
                 totalTicketCost += childTicketCosts;
             }
         }

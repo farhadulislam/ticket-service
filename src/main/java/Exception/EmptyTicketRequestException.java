@@ -1,4 +1,4 @@
-package Service;
+package Exception;
 
 import static Utility.Constants.ErrorMessages.ERROR_EMPTY_TICKET_REQUEST;
 

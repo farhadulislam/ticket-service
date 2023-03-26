@@ -13,7 +13,7 @@ import static Utility.Constants.ErrorMessages.ERROR_TICKET_REQUEST_NULL;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TicketRequestValidationsTest {
-    final Map<TicketTypeRequest, Integer> ticketRequestsTestObj = new HashMap<>();
+    private final Map<TicketTypeRequest, Integer> ticketRequestsTestObj = new HashMap<>();
     @BeforeEach
     void setUp() {
 

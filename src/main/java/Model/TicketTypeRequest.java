@@ -5,6 +5,7 @@ import static Utility.Constants.TicketType.*;
 
 public enum TicketTypeRequest {
 
+    //Build three enum constants with ticketTypes and their corresponding costs.
     INFANT(INFANT_TICKET, ZERO),
     CHILD(CHILD_TICKET, TEN),
     ADULT(ADULT_TICKET, TWENTY);

@@ -2,8 +2,8 @@ package Utility;
 
 import java.util.Map;
 import Model.TicketTypeRequest;
-import Service.AdultTicketAbsentException;
-import Service.MaximumNumberOfAuthorisedTicketsCrossedException;
+import Exception.AdultTicketAbsentException;
+import Exception.MaximumNumberOfAuthorisedTicketsCrossedException;
 
 import static Utility.Constants.Constraint.MAXIMUM_NUM_OF_PURCHASABLE_TICKETS;
 

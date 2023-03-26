@@ -1,4 +1,4 @@
-package Service;
+package Exception;
 
 import static Utility.Constants.ErrorMessages.ERROR_AN_ADULT_TICKET_MUST_BE_PRESENT;
 

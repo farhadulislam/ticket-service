@@ -1,2 +1,4 @@
 Utility\TicketRequestValidationsTest.class
 Model\AccountTest.class
+Service\TicketServiceImplTest.class
+Model\TicketTypeRequestTest.class
